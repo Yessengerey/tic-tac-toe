@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "prompt": "^1.0.0",
     "react": "^15.6.1"
   }
 }
