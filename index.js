@@ -1,15 +1,25 @@
-var prompt = require('prompt');
+const readline = require('readline');
 
-prompt.start();
-
-prompt.get(['username', 'email'], function (err, result) {
-  if (err) { return onErr(err); }
-  console.log('Command-line input received:');
-  console.log('  Username: ' + result.username);
-  console.log('  Email: ' + result.email);
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
 });
 
-function onErr(err) {
-  console.log(err);
-  return 1;
+var board = [['_', '_', '_'], ['_', '_', '_'], ['_', '_', '_']];
+
+// rl.question('What do you think of Node.js? ', (answer) => {
+//   console.log(`Thank you for your valuable feedback: ${answer}`);
+//
+//   rl.close();
+// });
+
+class Game {
+  constructor(players) {
+    this.numOfPlayers = players;
+  }
 }
+
+var GameLogic = function() {
+  var theGame = new Game(2);
+  console.log('Welcome to Command Line Tic Tac Toe!');
+}();
